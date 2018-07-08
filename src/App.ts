@@ -1,11 +1,12 @@
-class App {
-  constructor() { }
+import express from 'express';
 
-  run(): void {
-    console.log('hello world');
-  }
-}
+import { config } from './config';
+import { router as telemetriesRouter } from './Telemetries';
 
-const app = new App();
+const app = express();
 
-app.run();
+app.use('/telemetries', telemetriesRouter);
+
+app.listen(config.port, () => {
+  console.log(`Listening on port ${config.port}`);
+});
