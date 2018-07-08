@@ -1,0 +1,10 @@
+node_modules
+
+# Coverage reports
+coverage
+
+# OS metadata
+.DS_Store
+
+# Built app
+dist/**/*

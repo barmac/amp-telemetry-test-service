@@ -1,0 +1,28 @@
+{
+  "name": "amp-telemetry-test-service",
+  "version": "0.1.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "start": "node dist/App.js",
+    "build": "npm run lint && tsc",
+    "test": "jest --coverage --detectOpenHandles",
+    "debug": "npm run build && npm run watch-debug",
+    "watch": "npm run watch-ts & nodemon dist/App.js",
+    "watch-debug": "npm run watch-ts && nodemon --inspect dist/App.js",
+    "watch-ts": "tsc -w",
+    "lint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "author": "Maciej Barelkowski",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "23.1.0",
+    "@types/node": "10.3.3",
+    "jest": "23.1.0",
+    "nodemon": "1.17.5",
+    "ts-jest": "22.4.6",
+    "ts-node": "6.1.1",
+    "tslint": "5.10.0",
+    "typescript": "2.9.2"
+  }
+}
