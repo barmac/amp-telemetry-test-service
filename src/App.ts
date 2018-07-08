@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import { config } from './config';
 import { router as telemetriesRouter } from './Telemetries';
 
-mongoose.connect(process.env.DB_URL);
+mongoose.connect(process.env.DB_URL, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 const dbConnection = mongoose.connection;
 
