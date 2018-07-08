@@ -12,7 +12,7 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 
 ## Start
 
-Install dependencies and build the project. After that, run `npm start` to run the app.
+Install dependencies and build the project. Set required env MONGODB_URL to a valid MongoDb url. After that, run `npm start` to run the app.
 
 ## Running unit tests
 
